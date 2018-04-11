@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AC058F31-EDD5-4AE2-84DD-B41B8C491100}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>DataLayerDemo_04_DataLayers_EntityClasses_UI</RootNamespace>
-    <AssemblyName>DataLayerDemo_04_DataLayers_EntityClasses_UI</AssemblyName>
+    <ProjectGuid>{06770FB3-ABBC-415A-AB61-9379B937A09F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataLayerClasses</RootNamespace>
+    <AssemblyName>DataLayerClasses</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,20 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="iEmployeeDataLayer.cs" />
+    <Compile Include="MySQLDataLayer.cs" />
+    <Compile Include="SqlServerDataLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="TestDataLayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\DataLayerDemo_02_EntityClasses_UI\DataLayerClasses\DataLayerEntityClasses.csproj">
       <Project>{5cdb7250-1429-4c95-9f86-4ce0b689ed25}</Project>
       <Name>DataLayerEntityClasses</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataLayerClasses\DataLayerClasses.csproj">
-      <Project>{06770fb3-abbc-415a-ab61-9379b937a09f}</Project>
-      <Name>DataLayerClasses</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
