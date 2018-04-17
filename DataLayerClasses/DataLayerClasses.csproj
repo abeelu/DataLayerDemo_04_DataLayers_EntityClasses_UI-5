@@ -48,7 +48,7 @@
     <Compile Include="TestDataLayer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DataLayerDemo_02_EntityClasses_UI\DataLayerClasses\DataLayerEntityClasses.csproj">
+    <ProjectReference Include="..\DataLayerEntityClasses\DataLayerEntityClasses.csproj">
       <Project>{5cdb7250-1429-4c95-9f86-4ce0b689ed25}</Project>
       <Name>DataLayerEntityClasses</Name>
     </ProjectReference>
