@@ -9,7 +9,7 @@ namespace DataLayerDemo_04_DataLayers_EntityClasses_UI
         static void Main(string[] args)
         {
             //iEmployeeDataLayer edl = new TestDataLayer();
-            iEmployeeDataLayer edl = new SqlServerDataLayer("Data Source = (local); Initial Catalog = Northwind; Integrated Security = SSPI;");
+            iEmployeeDataLayer edl = new SqlServerDataLayer("Data Source = (local); Initial Catalog = RSACS; Integrated Security = SSPI;");
             //iEmployeeDataLayer edl = new MySQLDataLayer("Server=localhost;Database=Northwind;Uid=root;Pwd=;");
 
             var e = edl.getEmployee(1);
